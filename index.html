@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book-archive-assignment</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body class="bg-light">
+
+    <section class="container">
+        <!-- Title -->
+        <h1 class="text-center text-primary">Search Book</h1>
+
+        <div class="input-group mb-3 w-75 mx-auto">
+            <!-- Input field -->
+            <input id="search-field" type="text" class="form-control" placeholder="Enter a Book Name"
+                aria-label="Recipient's username" aria-describedby="button-addon2">
+            <!-- Search Button -->
+            <button onclick="searchBook()" class="btn btn-primary" type="button" id="button-search">Search</button>
+        </div>
+
+        <!-- Error message -->
+        <div class="d-flex justify-content-center">
+            <h1 style="display: none;" id="error-message" class="bg-primary text-center text-white rounded-3 w-75">No result found</h1>
+        </div>
+
+        <!-- Spinner -->
+        <div id="spinner" class="spinner-border text-primary" style="display: none; margin-left: 50%;" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        
+        <!-- search result count -->
+        <div class="d-flex justify-content-center">
+            <h1 id="book-numbers" class="bg-primary text-white text-center rounded-3 w-75"></h1>
+        </div>
+
+        <!-- Search result show -->
+        <div id="search-result" class=" my-5 row row-cols-1 row-cols-md-3 g-4">
+        </div>
+
+    </section>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- My JavaScript -->
+    <script src="js/book.js"></script>
+</body>
+
+</html>
