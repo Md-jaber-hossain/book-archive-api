@@ -17,15 +17,20 @@
 
         <div class="input-group mb-3 w-75 mx-auto">
             <!-- Input field -->
-            <input id="search-field" type="text" class="form-control" placeholder="Enter a Book Name"
+            <input id="input-field" type="text" class="form-control" placeholder="Enter a Book Name"
                 aria-label="Recipient's username" aria-describedby="button-addon2">
             <!-- Search Button -->
-            <button onclick="searchBook()" class="btn btn-primary" type="button" id="button-search">Search</button>
+            <button onclick="searchBook()" class="btn btn-primary" type="button">Search</button>
         </div>
 
-        <!-- Error message -->
+        <!-- Error message for empty search-->
         <div class="d-flex justify-content-center">
-            <h1 style="display: none;" id="error-message" class="bg-primary text-center text-white rounded-3 w-75">No result found</h1>
+            <h1 style="display: none;" id="error-message-empty" class="bg-primary text-center text-white rounded-3 w-75">Please, insert a Book name</h1>
+        </div>
+
+        <!-- Error message for invalid search-->
+        <div class="d-flex justify-content-center">
+            <h1 style="display: none;" id="error-message-invalid" class="bg-primary text-center text-white rounded-3 w-75">No result found</h1>
         </div>
 
         <!-- Spinner -->
@@ -33,9 +38,9 @@
             <span class="visually-hidden">Loading...</span>
         </div>
         
-        <!-- search result count -->
+        <!-- Book count for search -->
         <div class="d-flex justify-content-center">
-            <h1 id="book-numbers" class="bg-primary text-white text-center rounded-3 w-75"></h1>
+            <h1 id="book-count" class="bg-primary text-white text-center rounded-3 w-75"></h1>
         </div>
 
         <!-- Search result show -->
