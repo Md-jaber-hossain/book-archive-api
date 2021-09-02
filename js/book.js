@@ -75,7 +75,8 @@ const displaySearchResult = (booksArray, numFound) => {
 
             // dynamically set the images
             const bookImg = `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`
-            const publisherName = book.publisher.slice(0,1);
+            const publisherName = book?.publisher?.slice(0,1);
+            const authorName = book?.author_name?.slice(0,1);
             // create the div
             const div = document.createElement('div');
             div.classList.add('col');
@@ -85,7 +86,7 @@ const displaySearchResult = (booksArray, numFound) => {
                 <img height="400px" src="${bookImg? bookImg: " "}" class="w-100 mx-auto" alt="...">
                 <div class="card-body">
                     <h5 class="card-title"><b>Book Name:</b> ${book.title? book.title: " "}</h5>
-                    <p class="card-text"><b>Author Name:</b> ${book.author_name? book.author_name : " " }</p>
+                    <p class="card-text"><b>Author Name:</b> ${authorName? authorName : " " }</p>
                     <p class="card-text"><b>Publisher Name:</b> ${publisherName? publisherName: " "}</p>
                     <p class="card-text"><b>First Published:</b> ${book.first_publish_year? book.first_publish_year: " "}</p>
                 </div>
