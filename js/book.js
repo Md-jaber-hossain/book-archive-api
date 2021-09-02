@@ -2,16 +2,15 @@ const searchBook = () => {
     // getting input value
     const inputField = document.getElementById('input-field');
     const inputValue = inputField.value;
-    // clear input value
+    
+    // clear input value, search result and books count
     inputField.value = '';
-    // clear search result and books count
     document.getElementById('search-result').textContent ='';
-    // clear books count
     bookCountDisplay('');
-    // error message hide
+
+    // error message hide and display the spinner
     errorEmptyDisplay('none');
     errorInvalidDisplay('none');
-    // display the spinner
     spinnerDisplay('block');
 
     // chech the input field enpty or not
@@ -83,7 +82,7 @@ const displaySearchResult = (booksArray, numFound) => {
             // inside the div, set all the images and book details 
             div.innerHTML = `
             <div  class="card h-100">
-                <img height="400px" src="${bookImg? bookImg: " "}" class="w-100 mx-auto" alt="...">
+                <img height="400px" src="${bookImg? bookImg: ' ' }" class="w-100 mx-auto" alt="...">
                 <div class="card-body">
                     <h5 class="card-title"><b>Book Name:</b> ${book.title? book.title: " "}</h5>
                     <p class="card-text"><b>Author Name:</b> ${authorName? authorName : " " }</p>
